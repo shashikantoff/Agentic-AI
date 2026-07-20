@@ -1,38 +1,6 @@
 [
     {
         "role": "user",
-        "content": "tell me news"
-    },
-    {
-        "role": "assistant",
-        "content": "News Request Error: 400 Client Error: Bad Request for url: https://newsapi.org/v2/everything?q=&from=2026-07-17&language=en&pageSize=5&sortBy=publishedAt&searchIn=title%2Cdescription&apiKey=a2d9fe97768445908783c1ebfc9c76d4"
-    },
-    {
-        "role": "user",
-        "content": "tell me news"
-    },
-    {
-        "role": "assistant",
-        "content": "News Request Error: 400 Client Error: Bad Request for url: https://newsapi.org/v2/everything?q=&from=2026-07-17&language=en&pageSize=5&sortBy=publishedAt&searchIn=title%2Cdescription&apiKey=a2d9fe97768445908783c1ebfc9c76d4"
-    },
-    {
-        "role": "user",
-        "content": "tell me news"
-    },
-    {
-        "role": "assistant",
-        "content": "News Request Error: 400 Client Error: Bad Request for url: https://newsapi.org/v2/everything?q=&from=2026-07-17&language=en&pageSize=5&sortBy=publishedAt&searchIn=title%2Cdescription&apiKey=a2d9fe97768445908783c1ebfc9c76d4"
-    },
-    {
-        "role": "user",
-        "content": "tell me news"
-    },
-    {
-        "role": "assistant",
-        "content": "News Request Error: 400 Client Error: Bad Request for url: https://newsapi.org/v2/everything?q=&from=2026-07-17&language=en&pageSize=5&sortBy=publishedAt&searchIn=title%2Cdescription&apiKey=a2d9fe97768445908783c1ebfc9c76d4"
-    },
-    {
-        "role": "user",
         "content": "tell me delhi temprature"
     },
     {
@@ -78,5 +46,37 @@
     {
         "role": "assistant",
         "content": "📰 Latest News on 'delhi today'\n\n1. India news: Sonam Wangchuk calls for 'India's second freedom movement' on Monday\n🗞️ Source: DW (English)\n🕒 Published: 18-07-2026 06:28 AM\nWangchuk who is continuing his hunger strike from hospital urged people to attend Cockroach Janta Party's July 20 march to Parliament, calling it \"India's second freedom movement.\" DW has more. Activist Sonam Wangchuk is continuing his hunger strike from hosp…\n\n2. Delhi-NCR Weather Today: Will it rain in the national capital, Gurgaon, Noida and Ghaziabad?\n🗞️ Source: The Times of India\n🕒 Published: 18-07-2026 02:44 AM\nDelhi-NCR Rain Forecast: Delhi NCR experiences hot and humid weather with minimal rain today.  Isolated showers are possible during the morning hours across the region.  Rain chances increase significantly on Sunday, bringing slight temperature relief.  Monda…\n\n3. Today’s Gold Rate in India July 17: Gold prices down in Delhi, Mumbai, Kolkata, Bengaluru, Ahmedabad\n🗞️ Source: BusinessLine\n🕒 Published: 17-07-2026 05:03 AM\nGold, Silver Rate Today: Today's gold prices of 22, 24 down across Indian cities on July 17\n\n4. Gold, silver prices today, 17 July: Check retail rates of 24K, 22K gold, 999 silver in Delhi, Mumbai and Kolkata\n🗞️ Source: Livemint\n🕒 Published: 17-07-2026 04:05 AM\nGold and silver prices today, 17 July: Check the latest 24K, 22K gold and 999 silver retail rates across Delhi, Mumbai, Kolkata and other major Indian cities, along with MCX market updates.\n\n5. Delhi NCR weather today, July 17: Will it rain or stay hot in Delhi, Noida, Gurugram, Ghaziabad?\n🗞️ Source: The Times of India\n🕒 Published: 17-07-2026 03:38 AM\nDelhi NCR residents will face hot weather today with temperatures reaching forty degrees Celsius. Maximum temperatures in Delhi, Gurugram, and Noida are expected to hit forty degrees Celsius. Ghaziabad will experience a high of thirty-nine degrees Celsius whi…"
+    },
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello, how can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "2 + 2 "
+    },
+    {
+        "role": "assistant",
+        "content": "4"
+    },
+    {
+        "role": "user",
+        "content": "what is the temperature of delhi today?"
+    },
+    {
+        "role": "assistant",
+        "content": "City 'delhi today?' not found."
+    },
+    {
+        "role": "user",
+        "content": "what is the temperature of delhi"
+    },
+    {
+        "role": "assistant",
+        "content": "City: Delhi, Country: India\nTemperature: 30.5°C\nWind Speed: 1.5 km/h\nWeather Code: 95"
     }
 ]

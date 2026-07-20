@@ -1,6 +1,17 @@
 import os
 import streamlit as st
-from openai import OpenAI, APITimeoutError
+
+# The OpenAI client may not be available in all environments (for example
+# on a fresh deploy where dependencies haven't been installed yet). Import
+# defensively so the app can surface a clear error instead of crashing at
+# import time.
+try:
+    from openai import OpenAI, APITimeoutError
+    _OPENAI_IMPORTED = True
+except Exception:
+    OpenAI = None
+    APITimeoutError = Exception
+    _OPENAI_IMPORTED = False
 
 
 def _get_setting(name: str, default: str | None = None) -> str | None:
@@ -31,18 +42,26 @@ MODEL_NAME = _get_setting("MODEL_NAME", "gpt-4o-mini")
 client = None
 CONFIG_ERROR = None
 
-if API_KEY:
-    try:
-        client = OpenAI(
-            api_key=API_KEY,
-            base_url=BASE_URL,
-        )
-    except Exception as exc:
-        CONFIG_ERROR = f"LLM configuration error: {exc}"
-else:
+# If the `openai` package isn't installed, expose a clear configuration
+# error instead of letting the import fail during app import.
+if not _OPENAI_IMPORTED:
     CONFIG_ERROR = (
-        "LLM is not configured. Set API_KEY in environment variables or add it to Streamlit secrets."
+        "LLM configuration error: missing 'openai' Python package. "
+        "Add 'openai' to your requirements.txt and redeploy."
     )
+else:
+    if API_KEY:
+        try:
+            client = OpenAI(
+                api_key=API_KEY,
+                base_url=BASE_URL,
+            )
+        except Exception as exc:
+            CONFIG_ERROR = f"LLM configuration error: {exc}"
+    else:
+        CONFIG_ERROR = (
+            "LLM is not configured. Set API_KEY in environment variables or add it to Streamlit secrets."
+        )
 
 
 def chat(messages: list) -> str:
