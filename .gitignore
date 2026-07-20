@@ -1,0 +1,10 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+data/
+memory.json
+# Secrets
+.streamlit/
+.env/
+config.py
